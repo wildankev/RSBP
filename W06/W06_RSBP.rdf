@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#"
+     xml:base="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publishedBy (Functional Property) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publishedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publishes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publishes (Inverse Functional Property) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publishes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#subGenreOf (Transitive Property) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#subGenreOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#writtenBy (Asymmetric Property) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#writtenBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#writes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#writes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#writes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#sharesGenreWith (Reflexive Property) -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#sharesGenreWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#hasGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#sellsBook -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#sellsBook">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#availableAt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#availableAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#availableAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#authorEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#authorEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#authorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#authorName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#bookTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#bookTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#genreName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#genreName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#isbn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#isbn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#nationality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publicationYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publisherCity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publisherCity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publisherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#publisherName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#storeAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#storeAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#storeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#storeName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+    
+
+
+    <!-- Disjoint Classes -->
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Publishers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Gramedia_Pustaka_Utama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        <publisherCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakarta</publisherCity>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramedia Pustaka Utama</publisherName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Mizan_Publishing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Publisher"/>
+        <publisherCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bandung</publisherCity>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mizan Publishing</publisherName>
+    </owl:NamedIndividual>
+
+
+    <!-- Authors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Pramoedya_Ananta_Toer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <authorEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pramoedya@sastra.id</authorEmail>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pramoedya Ananta Toer</authorName>
+        <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesia</nationality>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Tere_Liye">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <authorEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tereliye@penulis.id</authorEmail>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tere Liye</authorName>
+        <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesia</nationality>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Arthur_Conan_Doyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Author"/>
+        <authorEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doyle@sherlock.uk</authorEmail>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sir Arthur Conan Doyle</authorName>
+        <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+    </owl:NamedIndividual>
+
+
+    <!-- Genres (Demonstrates Transitive Property subGenreOf: Cyberpunk -> Science_Fiction -> Fiction) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Fiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <genreName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiction</genreName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Science_Fiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <subGenreOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Fiction"/>
+        <genreName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science Fiction</genreName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Cyberpunk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <subGenreOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Science_Fiction"/>
+        <genreName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyberpunk</genreName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Historical_Fiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <subGenreOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Fiction"/>
+        <genreName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Historical Fiction</genreName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Mystery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Genre"/>
+        <subGenreOf rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Fiction"/>
+        <genreName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</genreName>
+    </owl:NamedIndividual>
+
+
+    <!-- Books (Demonstrates Functional publishedBy, Asymmetric writtenBy, Reflexive sharesGenreWith) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bumi_Manusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Historical_Fiction"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Gramedia_Pustaka_Utama"/>
+        <sharesGenreWith rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bumi_Manusia"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Pramoedya_Ananta_Toer"/>
+        <bookTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bumi Manusia</bookTitle>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">978-979-973-123-1</isbn>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95000</price>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</publicationYear>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Hujan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Science_Fiction"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Gramedia_Pustaka_Utama"/>
+        <sharesGenreWith rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Hujan"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Tere_Liye"/>
+        <bookTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hujan</bookTitle>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">978-602-032-456-2</isbn>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88000</price>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</publicationYear>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Neuromancer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Cyberpunk"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Mizan_Publishing"/>
+        <sharesGenreWith rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Neuromancer"/>
+        <bookTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuromancer</bookTitle>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">978-044-156-959-5</isbn>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</price>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</publicationYear>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Sherlock_Holmes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Book"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Mystery"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Gramedia_Pustaka_Utama"/>
+        <sharesGenreWith rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Sherlock_Holmes"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Arthur_Conan_Doyle"/>
+        <bookTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Study in Scarlet</bookTitle>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">978-014-103-611-3</isbn>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75000</price>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1887</publicationYear>
+    </owl:NamedIndividual>
+
+
+    <!-- Bookstores -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Gramedia_Manyar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+        <sellsBook rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bumi_Manusia"/>
+        <sellsBook rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Neuromancer"/>
+        <sellsBook rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Sherlock_Holmes"/>
+        <storeAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jl. Manyar Kertoarjo No. 16, Surabaya</storeAddress>
+        <storeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramedia Manyar</storeName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Togamas_Diponegoro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bookstore"/>
+        <sellsBook rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Bumi_Manusia"/>
+        <sellsBook rdf:resource="http://www.semanticweb.org/wilda/ontologies/2026/9/W06_RSBP#Hujan"/>
+        <storeAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jl. Raya Diponegoro No. 152, Surabaya</storeAddress>
+        <storeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Togamas Diponegoro</storeName>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
